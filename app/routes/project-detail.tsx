@@ -5,7 +5,7 @@ import { ProjectDetailView } from "~/features/projects/project-detail-view";
 
 export function meta({ params }: Route.MetaArgs) {
   const project = getProjectBySlug(params.slug);
-  return [{ title: project ? `${project.title} — Louis Afful` : "Project not found" }];
+  return [{ title: project ? `${project.title} - Louis Afful` : "Project not found" }];
 }
 
 export default function ProjectDetail({ params }: Route.ComponentProps) {

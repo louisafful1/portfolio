@@ -5,7 +5,7 @@ import { ArticleView } from "~/features/journal/article-view";
 
 export function meta({ params }: Route.MetaArgs) {
   const article = getArticleBySlug(params.slug);
-  return [{ title: article ? `${article.title} — Louis Afful` : "Article not found" }];
+  return [{ title: article ? `${article.title} - Louis Afful` : "Article not found" }];
 }
 
 export default function JournalArticleRoute({ params }: Route.ComponentProps) {

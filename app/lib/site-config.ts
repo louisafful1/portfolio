@@ -1,5 +1,5 @@
 // Central place for editable site copy & links.
-// Anything marked PLACEHOLDER should be swapped for the real value — see CONTENT.md.
+// Anything marked PLACEHOLDER should be swapped for the real value - see CONTENT.md.
 
 export const siteConfig = {
   name: "Louis Afful",
@@ -7,18 +7,17 @@ export const siteConfig = {
   eyebrow: "SOFTWARE ENGINEER",
   headline: "Building software that powers businesses, people and infrastructure.",
   intro:
-    "I design and build systems end to end — from enterprise applications to the networks and infrastructure they run on. Currently deepening my focus on cloud, DevOps, and AI engineering.",
-  location: "Ghana", // PLACEHOLDER
+    "I design and build systems end to end - from enterprise applications to the networks and infrastructure they run on. Currently deepening my focus on cloud, DevOps, and AI engineering.",
+  location: "Takoradi, Ghana",
   availability: "Available for opportunities",
   focus: ["Enterprise Applications", "AI Systems", "Networking", "DevOps"],
 
-  email: "louis.afful@example.com", // PLACEHOLDER
-  resumeUrl: "/resume-placeholder.pdf", // PLACEHOLDER — drop your real resume PDF into /public
+  email: "louisafful1@gmail.com",
+  phone: "+233 591 414 352",
+  resumeUrl: "/Louis-Afful-Resume.pdf",
 
   social: {
-    github: "https://github.com/louisafful", // PLACEHOLDER
-    githubUsername: "louisafful", // PLACEHOLDER — used for the live GitHub activity widget
-    linkedin: "https://linkedin.com/in/louisafful", // PLACEHOLDER
+    linkedin: "https://linkedin.com/in/louisafful",
     twitter: "", // PLACEHOLDER (optional) e.g. "https://x.com/yourhandle"
   },
 
@@ -31,12 +30,17 @@ export const siteConfig = {
   ],
 
   stats: {
-    projectsBuilt: 8,
+    projectsBuilt: 13,
     technologies: 20,
-    yearsBuilding: 2,
+    yearsBuilding: 3,
   },
 
-  currentlyLearning: ["Distributed Systems", "Kubernetes", "Retrieval-Augmented Generation"],
+  currentlyLearning: [
+    "Networking & Infrastructure",
+    "CCTV & NVR Systems",
+    "AI & Intelligent Systems",
+    "Retrieval-Augmented Generation",
+  ],
 } as const;
 
 export type SiteConfig = typeof siteConfig;

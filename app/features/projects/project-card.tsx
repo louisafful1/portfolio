@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="mt-6 flex flex-wrap gap-1.5">
         {project.tech.slice(0, 4).map((tech) => (
           <Badge key={tech} variant="secondary" className="font-mono text-xs font-normal">
-            {tech}
+            {tech.split(" (")[0]}
           </Badge>
         ))}
       </div>

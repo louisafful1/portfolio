@@ -1,10 +1,10 @@
-# Louis Afful — Portfolio
+# Louis Afful - Portfolio
 
 A personal engineering portfolio built to feel like a product, not a template.
 
 ## Stack
 
-- React 19 + React Router v7 (framework mode, SPA build — `ssr: false`)
+- React 19 + React Router v7 (framework mode, SPA build - `ssr: false`)
 - TypeScript
 - Tailwind CSS v4
 - shadcn/ui (Radix primitives) + Lucide icons
@@ -26,7 +26,7 @@ npm run start        # preview the production build locally
 
 Since this is a static SPA build, the contents of `build/client` can be
 deployed to any static host (Vercel, Netlify, GitHub Pages, Cloudflare
-Pages, S3 + CloudFront, etc.) — no Node server required. Configure your
+Pages, S3 + CloudFront, etc.) - no Node server required. Configure your
 host to fall back to `index.html` for unknown paths (SPA routing).
 
 ## Content

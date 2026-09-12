@@ -10,10 +10,11 @@ import { ProjectGrid } from "~/features/projects/project-grid";
 import { ExperienceTimeline } from "~/features/experience/experience-timeline";
 import { JournalList } from "~/features/journal/journal-list";
 import { ContactForm } from "~/features/contact/contact-form";
+import { ContactLinks } from "~/features/contact/contact-links";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: `${siteConfig.name} — ${siteConfig.role}` },
+    { title: `${siteConfig.name} - ${siteConfig.role}` },
     { name: "description", content: siteConfig.headline },
   ];
 }
@@ -37,17 +38,17 @@ export default function Home() {
       <section id="about" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
         <SectionHeading
           eyebrow="The Journey"
-          title="From student to systems thinker"
-          description="A path shaped by curiosity, enterprise systems, infrastructure, and a growing focus on AI and cloud."
+          title="Problem first, then software"
+          description="A path shaped by real operational problems - from full-stack fundamentals to business software and AI-powered applications built for how work actually happens."
         />
         <JourneyTimeline />
       </section>
 
       <section id="skills" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
         <SectionHeading
-          eyebrow="Capabilities"
-          title="Skills, organized like a filesystem"
-          description="No progress bars — just the categories I actually work in."
+          eyebrow="My Toolkit"
+          title="The stack behind my work"
+          description="The tools and technologies I work with."
         />
         <SkillsExplorer />
       </section>
@@ -63,8 +64,8 @@ export default function Home() {
 
       <section id="experience" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
         <SectionHeading
-          eyebrow="Experience"
-          title="Where I've been building"
+          eyebrow="Career"
+          title="Professional Experience"
         />
         <ExperienceTimeline />
       </section>
@@ -73,7 +74,7 @@ export default function Home() {
         <SectionHeading
           eyebrow="Journal"
           title="Writing"
-          description="Reflections on networking, systems design, AI, and the career journey so far."
+          description="Notes on software, automation, and the business problems behind the code."
         />
         <JournalList />
       </section>
@@ -84,6 +85,7 @@ export default function Home() {
           title="Let's build something"
           description="Have a role, a project, or just want to talk systems? Send a message."
         />
+        <ContactLinks />
         <ContactForm />
       </section>
     </>

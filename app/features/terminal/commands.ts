@@ -35,7 +35,7 @@ export function runCommand(rawInput: string, ctx: TerminalContext): CommandOutpu
 
     case "about":
       return [
-        `${siteConfig.name} — ${siteConfig.role}`,
+        `${siteConfig.name} - ${siteConfig.role}`,
         siteConfig.intro,
         "",
         `Focus: ${siteConfig.focus.join(", ")}`,

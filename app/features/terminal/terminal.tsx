@@ -62,7 +62,7 @@ export function Terminal({ open, onOpenChange }: { open: boolean; onOpenChange: 
           <span className="size-2.5 rounded-full bg-[#ff5f57]" />
           <span className="size-2.5 rounded-full bg-[#febc2e]" />
           <span className="size-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 text-xs text-[#71717a]">louis@portfolio — zsh</span>
+          <span className="ml-2 text-xs text-[#71717a]">louis@portfolio - zsh</span>
           <LogoMark className="ml-auto h-4 w-auto opacity-80" />
         </div>
 

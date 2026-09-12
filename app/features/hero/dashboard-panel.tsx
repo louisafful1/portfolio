@@ -1,11 +1,9 @@
 import { motion } from "motion/react";
 import { Radio } from "lucide-react";
 import { siteConfig } from "~/lib/site-config";
-import { GithubIcon } from "~/components/icons";
 import { Badge } from "~/components/ui/badge";
 import { StatusDot } from "./status-dot";
 import { useCounter } from "~/hooks/use-counter";
-import { useGithubStats } from "./use-github-stats";
 
 function Metric({ label, value, suffix = "" }: { label: string; value: number; suffix?: string }) {
   const { ref, value: animated } = useCounter(value);
@@ -21,8 +19,6 @@ function Metric({ label, value, suffix = "" }: { label: string; value: number; s
 }
 
 export function DashboardPanel() {
-  const github = useGithubStats(siteConfig.social.githubUsername);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -55,22 +51,6 @@ export function DashboardPanel() {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="border-t border-border px-5 py-4">
-        <div className="mb-2 flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-          <GithubIcon className="size-3.5" /> GitHub activity
-        </div>
-        {github.loading ? (
-          <p className="text-sm text-muted-foreground">Fetching stats…</p>
-        ) : github.error ? (
-          <p className="text-sm text-muted-foreground">Live stats unavailable right now.</p>
-        ) : (
-          <div className="flex gap-6 font-mono text-sm text-foreground">
-            <span>{github.publicRepos} repos</span>
-            <span>{github.followers} followers</span>
-          </div>
-        )}
       </div>
 
       <div className="border-t border-border px-5 py-4">

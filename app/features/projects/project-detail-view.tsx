@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { GithubIcon } from "~/components/icons";
 import type { Project } from "./projects-data";
 import { SystemDiagram } from "./system-diagram";
 
@@ -41,22 +40,13 @@ export function ProjectDetailView({ project }: { project: Project }) {
           ))}
         </div>
 
-        {(project.links?.repo || project.links?.demo) && (
+        {project.links?.demo && (
           <div className="flex flex-wrap gap-2 pt-1">
-            {project.links.repo && (
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.links.repo} target="_blank" rel="noreferrer">
-                  <GithubIcon className="size-4" /> View code
-                </a>
-              </Button>
-            )}
-            {project.links.demo && (
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.links.demo} target="_blank" rel="noreferrer">
-                  Live demo <ArrowUpRight className="size-4" />
-                </a>
-              </Button>
-            )}
+            <Button variant="outline" size="sm" asChild>
+              <a href={project.links.demo} target="_blank" rel="noreferrer">
+                Live demo <ArrowUpRight className="size-4" />
+              </a>
+            </Button>
           </div>
         )}
       </header>

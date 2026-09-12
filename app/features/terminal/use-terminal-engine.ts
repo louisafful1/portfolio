@@ -11,7 +11,7 @@ let lineId = 0;
 
 export function useTerminalEngine(ctx: Omit<TerminalContext, "clear">) {
   const [lines, setLines] = useState<Line[]>([
-    { id: lineId++, type: "output", text: "Louis Afful's terminal — type 'help' to get started." },
+    { id: lineId++, type: "output", text: "Louis Afful's terminal - type 'help' to get started." },
   ]);
   const [history, setHistory] = useState<string[]>([]);
   const historyIndex = useRef<number>(-1);

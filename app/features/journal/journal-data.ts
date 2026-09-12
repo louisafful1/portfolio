@@ -11,89 +11,244 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
-    slug: "what-a-mining-network-taught-me",
-    title: "What a Mining Site Network Taught Me About Reliability",
-    date: "2026-02-10",
-    tags: ["Networking", "Infrastructure"],
+    slug: "people-reveal-themselves-in-small-things",
+    title: "I Think People Reveal Themselves in Small Things",
+    date: "2026-09-12",
+    tags: ["Reflection", "Character"],
     excerpt:
-      "Uptime isn't an abstract SLA when the network you're maintaining connects real equipment on a real site.",
+      "Big moments are too obvious. Character shows up in the small, unwatched ones.",
     blocks: [
       {
         type: "paragraph",
-        text: "In enterprise software, 'downtime' is often an inconvenience. On a mining site, a network hiccup can stall equipment coordination and safety systems. That difference changed how I think about reliability.",
+        text: "I don't think people reveal themselves in the big moments as much as we think they do.",
       },
-      { type: "heading", text: "What changed in my mental model" },
+      { type: "paragraph", text: "Big moments are too obvious." },
+      {
+        type: "paragraph",
+        text: "When something important happens, everyone suddenly knows they are being watched. People become careful. They choose their words. They think about how they want to be remembered.",
+      },
+      { type: "heading", text: "The small moments are different." },
       {
         type: "list",
         items: [
-          "Redundancy isn't a 'nice to have' — it's the difference between a blip and an incident.",
-          "Monitoring has to tell you about a problem before a person does.",
-          "Documentation is a reliability feature, not paperwork — the fastest fix is the one where someone already wrote down the topology.",
+          "How someone speaks to a person who cannot do anything for them.",
+          "Whether they return something they borrowed.",
+          "How they react when someone corrects them.",
+          "Whether they listen when the conversation is no longer about them.",
+          "What they do when they make a mistake.",
+          "How they treat people when they are frustrated.",
         ],
       },
       {
         type: "paragraph",
-        text: "I now design software with the same bias: assume the network will fail sometimes, and make sure the system degrades gracefully instead of catastrophically.",
+        text: "These things seem insignificant until you start noticing patterns.",
+      },
+      { type: "paragraph", text: "I have become more interested in those patterns." },
+      {
+        type: "list",
+        items: [
+          "Someone can speak beautifully about respect and still be rude to people they consider less important.",
+          "Someone can talk endlessly about teamwork but become defensive the moment someone points out a mistake.",
+          "Someone can describe themselves as hardworking but disappear whenever there is no recognition attached to the work.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "And then there are people who barely talk about their character at all.",
+      },
+      { type: "paragraph", text: "They just behave consistently." },
+      {
+        type: "list",
+        items: [
+          "They say thank you.",
+          "They keep their word.",
+          "They listen.",
+          "They help without making a performance out of it.",
+          "They don't need to tell you they are humble.",
+        ],
+      },
+      { type: "paragraph", text: "You can see it." },
+      { type: "heading", text: "Why first impressions can be misleading" },
+      {
+        type: "paragraph",
+        text: "We often judge people by how well they present themselves. But presentation is a skill. Character is what remains after the presentation becomes unnecessary.",
+      },
+      {
+        type: "paragraph",
+        text: "I don't think this means we should become suspicious of everyone or spend our lives analysing tiny behaviours. It just means I have learned to pay attention.",
+      },
+      {
+        type: "paragraph",
+        text: "Especially to how people behave when there is nothing to gain. Because when there is no reward, no audience, and no advantage, the decision becomes a little more honest.",
+      },
+      {
+        type: "paragraph",
+        text: "And sometimes a person's smallest decisions tell you what their biggest speeches never could.",
       },
     ],
   },
   {
-    slug: "containers-clicked-for-me",
-    title: "The Day Containers Finally Clicked",
-    date: "2026-01-18",
-    tags: ["DevOps", "Docker"],
+    slug: "the-quiet-cost-of-becoming-dependable",
+    title: "The Quiet Cost of Becoming the Person Everyone Can Depend On",
+    date: "2026-09-10",
+    tags: ["Reflection", "Responsibility"],
     excerpt:
-      "I understood Docker's commands long before I understood why they mattered. Here's what changed.",
+      "Being dependable is a compliment - until it quietly becomes a job no one asked if you wanted.",
     blocks: [
+      { type: "paragraph", text: "Being dependable sounds like a compliment." },
+      { type: "paragraph", text: "It is." },
       {
         type: "paragraph",
-        text: "I could run docker build and docker run correctly for months before I actually understood the problem containers solve: 'works on my machine' isn't a joke, it's a reproducibility failure.",
+        text: "But I don't think we talk enough about the cost that sometimes comes with it.",
       },
-      { type: "heading", text: "The reframe" },
       {
         type: "paragraph",
-        text: "A container isn't a lightweight VM — it's a promise: this process runs the same way here as it will in production, because the environment is shipped with the code.",
+        text: "When people discover that you can be counted on, they start counting on you.",
       },
-    ],
-  },
-  {
-    slug: "designing-for-the-i-dont-know-case",
-    title: "Designing for the 'I Don't Know' Case in AI Systems",
-    date: "2026-02-24",
-    tags: ["AI", "System Design"],
-    excerpt:
-      "The most trustworthy thing an AI feature can do is admit it doesn't have an answer.",
-    blocks: [
+      { type: "paragraph", text: "At first, you are proud of that." },
       {
         type: "paragraph",
-        text: "Building a retrieval-augmented assistant taught me that the hardest and most valuable feature isn't the correct answer — it's a well-designed 'I don't know'.",
+        text: "Your phone rings and someone needs help. You answer. Someone has forgotten something. You remember. Something needs to be followed up. You do it.",
+      },
+      {
+        type: "paragraph",
+        text: "Eventually, people don't even ask whether you can handle it.",
+      },
+      { type: "paragraph", text: "They assume you will." },
+      { type: "paragraph", text: "And there is something satisfying about being that person." },
+      {
+        type: "paragraph",
+        text: "You know that if something falls into your hands, it probably won't disappear.",
+      },
+      { type: "heading", text: "The quiet danger of the identity" },
+      {
+        type: "paragraph",
+        text: "But there is a quiet danger in becoming too comfortable with that identity.",
       },
       {
         type: "list",
         items: [
-          "A confident wrong answer is worse than a slower correct one.",
-          "Retrieval confidence thresholds matter more than most prompt tweaks.",
-          "Users trust a system faster once they've seen it refuse to guess.",
+          "You can become so used to carrying things that you forget to ask whether they were yours to carry.",
+          "You can become the person who says \"I'll handle it\" before thinking about what it will cost you.",
+          "You can become reliable to everyone while slowly becoming unavailable to yourself.",
         ],
+      },
+      {
+        type: "paragraph",
+        text: "I think dependable people sometimes have difficulty disappointing others.",
+      },
+      {
+        type: "list",
+        items: [
+          "So they say yes when they should say, \"I can't do this right now.\"",
+          "They accept responsibilities they don't have the time for.",
+          "They hide exhaustion because they don't want to become the person who suddenly cannot be relied upon.",
+        ],
+      },
+      { type: "paragraph", text: "And eventually, reliability starts becoming resentment." },
+      { type: "paragraph", text: "That is not what dependability is supposed to become." },
+      { type: "heading", text: "Being honest about your capacity" },
+      {
+        type: "paragraph",
+        text: "I am beginning to think that being dependable also means being honest about your capacity.",
+      },
+      { type: "paragraph", text: "If I tell you I will do something, I should mean it." },
+      {
+        type: "paragraph",
+        text: "But if I cannot do it properly, telling you early is more responsible than quietly struggling until the deadline passes.",
+      },
+      {
+        type: "paragraph",
+        text: "There is nothing noble about making yourself permanently exhausted just so everyone else can remain comfortable.",
+      },
+      {
+        type: "paragraph",
+        text: "People who genuinely depend on you need the truth from you too.",
+      },
+      {
+        type: "list",
+        items: [
+          "Sometimes that truth is, \"I need help.\"",
+          "Sometimes it is, \"I won't be able to finish this today.\"",
+          "Sometimes it is simply, \"This is not mine to handle.\"",
+        ],
+      },
+      { type: "paragraph", text: "I still want to be someone people can depend on." },
+      { type: "paragraph", text: "Very much." },
+      {
+        type: "paragraph",
+        text: "But I don't think that should mean becoming the person who carries everything.",
+      },
+      {
+        type: "paragraph",
+        text: "Maybe real dependability is knowing what you can carry, carrying it well, and having enough honesty to put something down when you cannot.",
       },
     ],
   },
   {
-    slug: "student-to-systems-thinker",
-    title: "From Student to Systems Thinker",
-    date: "2025-12-05",
-    tags: ["Career", "Reflection"],
+    slug: "how-we-get-used-to-things",
+    title: "How We Get Used to Things",
+    date: "2026-09-08",
+    tags: ["Reflection", "Problem Solving"],
     excerpt:
-      "A reflection on the shift from 'can I make this work' to 'how should this be built'.",
+      "\"That's how we do it here\" is not an explanation. It's just a history.",
     blocks: [
+      { type: "paragraph", text: "There is something strange about human beings." },
+      { type: "paragraph", text: "We can get used to almost anything." },
       {
         type: "paragraph",
-        text: "Early on, success meant getting a feature to run. Somewhere between enterprise systems, networking, and an industrial environment, the question changed to: how does this fail, and what happens when it does?",
+        text: "A broken chair stays in the same corner for three years because everyone knows which side is broken and has learned how to sit on the other side. A form takes twenty minutes to complete every morning, so people simply arrive ten minutes earlier. Someone keeps calling three different people to get information that could have been in one place, and eventually that becomes the normal way of getting information.",
+      },
+      { type: "paragraph", text: "Nobody wakes up and decides that this is a good system." },
+      { type: "paragraph", text: "It just stays long enough." },
+      {
+        type: "paragraph",
+        text: "I think that is how many bad systems survive. Not because nobody notices them, but because people eventually stop seeing them as problems.",
+      },
+      { type: "paragraph", text: "We say, \"That's how we do it here.\"" },
+      { type: "paragraph", text: "That sentence is more powerful than it sounds." },
+      { type: "paragraph", text: "It can kill curiosity." },
+      {
+        type: "paragraph",
+        text: "Once something becomes familiar, we stop asking whether it still makes sense. We become experts at working around problems instead of solving them. We learn the weaknesses of a process so well that we begin to mistake our ability to cope with it for proof that the process works.",
+      },
+      { type: "heading", text: "Looking at ordinary things differently" },
+      {
+        type: "paragraph",
+        text: "Maybe that is why I find myself looking at ordinary things differently now.",
       },
       {
         type: "paragraph",
-        text: "That shift — from feature-thinking to systems-thinking — is the throughline of my journey from student to the engineer I'm becoming.",
+        text: "When I see someone doing something repeatedly, I sometimes wonder why they have to do it that way. Not because the person is doing something wrong. Sometimes they are doing exactly what they were taught.",
       },
+      {
+        type: "paragraph",
+        text: "The question is whether the process itself deserves to remain that way.",
+      },
+      { type: "paragraph", text: "And I have also learned that the answer isn't always software." },
+      {
+        type: "list",
+        items: [
+          "Sometimes the best solution is a better form.",
+          "Sometimes it is moving something closer to where it is needed.",
+          "Sometimes it is teaching someone properly.",
+          "Sometimes the problem is simply that nobody has taken ownership of it.",
+        ],
+      },
+      { type: "paragraph", text: "But sometimes, yes, it is software." },
+      { type: "paragraph", text: "The interesting part is not the technology." },
+      { type: "paragraph", text: "The interesting part is noticing." },
+      {
+        type: "paragraph",
+        text: "I think good problem solving begins long before someone opens a code editor. It begins when you become uncomfortable with something everyone else has already accepted.",
+      },
+      { type: "paragraph", text: "Not every inconvenience needs to become a project." },
+      { type: "paragraph", text: "But some of them deserve a second look." },
+      {
+        type: "paragraph",
+        text: "Because \"we've always done it this way\" is not an explanation.",
+      },
+      { type: "paragraph", text: "It is just a history." },
     ],
   },
 ];

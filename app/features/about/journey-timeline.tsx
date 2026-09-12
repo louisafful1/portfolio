@@ -2,14 +2,12 @@ import { motion } from "motion/react";
 import { journeySteps } from "~/features/experience/experience-data";
 
 const captions: Record<string, string> = {
-  Student: "Learning the fundamentals — curious about how software actually works.",
-  "Software Development": "Building first real applications, end to end.",
-  "Enterprise Systems": "Working with systems built for scale, process, and reliability.",
-  Networking: "Getting hands-on with the infrastructure software runs on.",
-  "Mining Industry": "Applying engineering skills where downtime has real consequences.",
-  AI: "Building systems that reason over data, grounded and traceable.",
-  "Cloud & DevOps": "Owning the full lifecycle — from code to deployment to monitoring.",
-  Future: "Enterprise software, AI systems, and infrastructure at scale.",
+  "Problem First": "Understanding how the work actually happens, before writing a line of code.",
+  "Full-Stack Development": "Building complete, working applications end to end.",
+  "Business & Operational Software": "Solving real workflow problems - attendance, inventory, logistics, inspections.",
+  "Real-World Systems": "Hands-on IT and software experience inside a live mining operation.",
+  "AI-Powered Applications": "Adding intelligence to real workflows, not novelty demos.",
+  "Software Engineer": "Building software that holds up under real operational use.",
 };
 
 export function JourneyTimeline() {

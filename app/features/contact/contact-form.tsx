@@ -28,7 +28,7 @@ export function ContactForm() {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    // No backend wired up yet — this simulates a send.
+    // No backend wired up yet - this simulates a send.
     // Swap this block for a real request (e.g. Formspree/EmailJS/your own API) when ready.
     setStatus("sending");
     setTimeout(() => {
@@ -50,7 +50,7 @@ export function ContactForm() {
             <CheckCircle2 className="size-8 text-primary" />
             <p className="font-heading text-lg font-semibold text-foreground">Message transmitted</p>
             <p className="max-w-sm text-sm text-muted-foreground">
-              Thanks for reaching out — I'll get back to you at {siteConfig.email} soon.
+              Thanks for reaching out - I'll get back to you at {siteConfig.email} soon.
             </p>
             <Button variant="outline" size="sm" onClick={() => setStatus("idle")} className="mt-2">
               Send another

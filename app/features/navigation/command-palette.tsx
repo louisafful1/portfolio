@@ -9,7 +9,7 @@ import {
   TerminalSquare,
   User,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "~/components/icons";
+import { LinkedinIcon } from "~/components/icons";
 import {
   CommandDialog,
   CommandEmpty,
@@ -103,9 +103,6 @@ export function CommandPalette({ onOpenTerminal }: { onOpenTerminal: () => void 
         </CommandGroup>
         <CommandSeparator />
         <CommandGroup heading="Elsewhere">
-          <CommandItem onSelect={() => run(() => window.open(siteConfig.social.github, "_blank"))}>
-            <GithubIcon className="size-4" /> GitHub
-          </CommandItem>
           <CommandItem onSelect={() => run(() => window.open(siteConfig.social.linkedin, "_blank"))}>
             <LinkedinIcon className="size-4" /> LinkedIn
           </CommandItem>
