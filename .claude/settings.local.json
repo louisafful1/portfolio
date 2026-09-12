@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-react-router@latest . --no-git-init --template remix-run/react-router-templates/default)"
+    ]
+  }
+}
