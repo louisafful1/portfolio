@@ -18,6 +18,7 @@ export const siteConfig = {
 
   social: {
     linkedin: "https://linkedin.com/in/louisafful",
+    whatsapp: "https://wa.me/233591414352",
     twitter: "", // PLACEHOLDER (optional) e.g. "https://x.com/yourhandle"
   },
 

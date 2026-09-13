@@ -8,6 +8,23 @@ export interface TerminalContext {
 
 export type CommandOutput = string[];
 
+const KNOWN_COMMANDS = [
+  "help",
+  "about",
+  "experience",
+  "skills",
+  "projects",
+  "resume",
+  "contact",
+  "whoami",
+  "sudo",
+  "clear",
+] as const;
+
+export function isKnownCommand(word: string): boolean {
+  return (KNOWN_COMMANDS as readonly string[]).includes(word);
+}
+
 const help: CommandOutput = [
   "Available commands:",
   "",
@@ -18,9 +35,13 @@ const help: CommandOutput = [
   "  projects    jump to featured work",
   "  resume      download the resume",
   "  contact     get in touch",
+  "  ask <question>  ask about Louis's work, projects, or experience",
   "  whoami      guess who",
   "  sudo        try it",
   "  clear       clear the screen",
+  "",
+  "You can also just type a question directly, e.g.:",
+  "  What problem did the attendance system solve?",
 ];
 
 export function runCommand(rawInput: string, ctx: TerminalContext): CommandOutput {

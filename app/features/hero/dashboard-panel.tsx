@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Radio } from "lucide-react";
 import { siteConfig } from "~/lib/site-config";
 import { Badge } from "~/components/ui/badge";
@@ -20,12 +19,7 @@ function Metric({ label, value, suffix = "" }: { label: string; value: number; s
 
 export function DashboardPanel() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="w-full max-w-md rounded-2xl border border-border bg-card/60 backdrop-blur-sm"
-    >
+    <div className="w-full max-w-md rounded-2xl border border-border bg-card/60 backdrop-blur-sm">
       <div className="flex items-center justify-between border-b border-border px-5 py-3.5">
         <div className="flex items-center gap-2">
           <StatusDot />
@@ -58,13 +52,13 @@ export function DashboardPanel() {
           Tech stack
         </p>
         <div className="flex flex-wrap gap-1.5">
-          {["React", "Node.js", "TypeScript", "Docker", "PostgreSQL", "AWS"].map((tech) => (
+          {["React", "Node.js", "TypeScript", "Docker", "PostgreSQL", "MongoDB", "React Native", "Cron Jobs", "Networking"].map((tech) => (
             <Badge key={tech} variant="secondary" className="font-mono text-xs font-normal">
               {tech}
             </Badge>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ArrowDown, Download } from "lucide-react";
 import { siteConfig } from "~/lib/site-config";
 import { Button } from "~/components/ui/button";
-import { DashboardPanel } from "./dashboard-panel";
+import { HeroPanelCarousel } from "./hero-panel-carousel";
 
 const container = {
   hidden: {},
@@ -83,7 +83,7 @@ export function HeroSection() {
         transition={{ duration: 0.6, delay: 0.15 }}
         className="flex flex-1 justify-center lg:justify-end"
       >
-        <DashboardPanel />
+        <HeroPanelCarousel />
       </motion.div>
     </section>
   );

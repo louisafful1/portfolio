@@ -11,6 +11,72 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
+    slug: "how-we-get-used-to-things",
+    title: "How We Get Used to Things",
+    date: "2026-09-08",
+    tags: ["Reflection", "Problem Solving"],
+    excerpt:
+      "\"That's how we do it here\" is not an explanation. It's just a history.",
+    blocks: [
+      { type: "paragraph", text: "There is something strange about human beings." },
+      { type: "paragraph", text: "We can get used to almost anything." },
+      {
+        type: "paragraph",
+        text: "A broken chair stays in the same corner for three years because everyone knows which side is broken and has learned how to sit on the other side. A form takes twenty minutes to complete every morning, so people simply arrive ten minutes earlier. Someone keeps calling three different people to get information that could have been in one place, and eventually that becomes the normal way of getting information.",
+      },
+      { type: "paragraph", text: "Nobody wakes up and decides that this is a good system." },
+      { type: "paragraph", text: "It just stays long enough." },
+      {
+        type: "paragraph",
+        text: "I think that is how many bad systems survive. Not because nobody notices them, but because people eventually stop seeing them as problems.",
+      },
+      { type: "paragraph", text: "We say, \"That's how we do it here.\"" },
+      { type: "paragraph", text: "That sentence is more powerful than it sounds." },
+      { type: "paragraph", text: "It can kill curiosity." },
+      {
+        type: "paragraph",
+        text: "Once something becomes familiar, we stop asking whether it still makes sense. We become experts at working around problems instead of solving them. We learn the weaknesses of a process so well that we begin to mistake our ability to cope with it for proof that the process works.",
+      },
+      { type: "heading", text: "Looking at ordinary things differently" },
+      {
+        type: "paragraph",
+        text: "Maybe that is why I find myself looking at ordinary things differently now.",
+      },
+      {
+        type: "paragraph",
+        text: "When I see someone doing something repeatedly, I sometimes wonder why they have to do it that way. Not because the person is doing something wrong. Sometimes they are doing exactly what they were taught.",
+      },
+      {
+        type: "paragraph",
+        text: "The question is whether the process itself deserves to remain that way.",
+      },
+      { type: "paragraph", text: "And I have also learned that the answer isn't always software." },
+      {
+        type: "list",
+        items: [
+          "Sometimes the best solution is a better form.",
+          "Sometimes it is moving something closer to where it is needed.",
+          "Sometimes it is teaching someone properly.",
+          "Sometimes the problem is simply that nobody has taken ownership of it.",
+        ],
+      },
+      { type: "paragraph", text: "But sometimes, yes, it is software." },
+      { type: "paragraph", text: "The interesting part is not the technology." },
+      { type: "paragraph", text: "The interesting part is noticing." },
+      {
+        type: "paragraph",
+        text: "I think good problem solving begins long before someone opens a code editor. It begins when you become uncomfortable with something everyone else has already accepted.",
+      },
+      { type: "paragraph", text: "Not every inconvenience needs to become a project." },
+      { type: "paragraph", text: "But some of them deserve a second look." },
+      {
+        type: "paragraph",
+        text: "Because \"we've always done it this way\" is not an explanation.",
+      },
+      { type: "paragraph", text: "It is just a history." },
+    ],
+  },
+  {
     slug: "people-reveal-themselves-in-small-things",
     title: "I Think People Reveal Themselves in Small Things",
     date: "2026-09-12",
@@ -183,72 +249,6 @@ export const journalArticles: JournalArticle[] = [
         type: "paragraph",
         text: "Maybe real dependability is knowing what you can carry, carrying it well, and having enough honesty to put something down when you cannot.",
       },
-    ],
-  },
-  {
-    slug: "how-we-get-used-to-things",
-    title: "How We Get Used to Things",
-    date: "2026-09-08",
-    tags: ["Reflection", "Problem Solving"],
-    excerpt:
-      "\"That's how we do it here\" is not an explanation. It's just a history.",
-    blocks: [
-      { type: "paragraph", text: "There is something strange about human beings." },
-      { type: "paragraph", text: "We can get used to almost anything." },
-      {
-        type: "paragraph",
-        text: "A broken chair stays in the same corner for three years because everyone knows which side is broken and has learned how to sit on the other side. A form takes twenty minutes to complete every morning, so people simply arrive ten minutes earlier. Someone keeps calling three different people to get information that could have been in one place, and eventually that becomes the normal way of getting information.",
-      },
-      { type: "paragraph", text: "Nobody wakes up and decides that this is a good system." },
-      { type: "paragraph", text: "It just stays long enough." },
-      {
-        type: "paragraph",
-        text: "I think that is how many bad systems survive. Not because nobody notices them, but because people eventually stop seeing them as problems.",
-      },
-      { type: "paragraph", text: "We say, \"That's how we do it here.\"" },
-      { type: "paragraph", text: "That sentence is more powerful than it sounds." },
-      { type: "paragraph", text: "It can kill curiosity." },
-      {
-        type: "paragraph",
-        text: "Once something becomes familiar, we stop asking whether it still makes sense. We become experts at working around problems instead of solving them. We learn the weaknesses of a process so well that we begin to mistake our ability to cope with it for proof that the process works.",
-      },
-      { type: "heading", text: "Looking at ordinary things differently" },
-      {
-        type: "paragraph",
-        text: "Maybe that is why I find myself looking at ordinary things differently now.",
-      },
-      {
-        type: "paragraph",
-        text: "When I see someone doing something repeatedly, I sometimes wonder why they have to do it that way. Not because the person is doing something wrong. Sometimes they are doing exactly what they were taught.",
-      },
-      {
-        type: "paragraph",
-        text: "The question is whether the process itself deserves to remain that way.",
-      },
-      { type: "paragraph", text: "And I have also learned that the answer isn't always software." },
-      {
-        type: "list",
-        items: [
-          "Sometimes the best solution is a better form.",
-          "Sometimes it is moving something closer to where it is needed.",
-          "Sometimes it is teaching someone properly.",
-          "Sometimes the problem is simply that nobody has taken ownership of it.",
-        ],
-      },
-      { type: "paragraph", text: "But sometimes, yes, it is software." },
-      { type: "paragraph", text: "The interesting part is not the technology." },
-      { type: "paragraph", text: "The interesting part is noticing." },
-      {
-        type: "paragraph",
-        text: "I think good problem solving begins long before someone opens a code editor. It begins when you become uncomfortable with something everyone else has already accepted.",
-      },
-      { type: "paragraph", text: "Not every inconvenience needs to become a project." },
-      { type: "paragraph", text: "But some of them deserve a second look." },
-      {
-        type: "paragraph",
-        text: "Because \"we've always done it this way\" is not an explanation.",
-      },
-      { type: "paragraph", text: "It is just a history." },
     ],
   },
 ];

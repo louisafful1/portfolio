@@ -1,9 +1,46 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, useLocation } from "react-router";
+import { Link, useNavigate, useLocation } from "react-router";
 import { Dialog, DialogContent, DialogTitle } from "~/components/ui/dialog";
 import { LogoMark } from "~/components/logo-mark";
 import { siteConfig } from "~/lib/site-config";
 import { useTerminalEngine } from "./use-terminal-engine";
+
+const SUGGESTED_QUESTIONS = [
+  "What problem did the attendance system solve?",
+  "What did Louis work on at Adamus?",
+  "Tell me about the firetruck checklist.",
+  "Which projects involve business operations?",
+];
+
+const LINK_PATTERN = /(https?:\/\/[^\s]+[^\s.,)]|[\w.+-]+@[\w-]+\.[\w.-]+)/g;
+
+function linkifyText(text: string) {
+  const parts = text.split(LINK_PATTERN);
+  return parts.map((part, index) => {
+    if (!part) return null;
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a
+          key={index}
+          href={part}
+          target="_blank"
+          rel="noreferrer"
+          className="text-primary underline-offset-2 hover:underline"
+        >
+          {part}
+        </a>
+      );
+    }
+    if (/^[\w.+-]+@[\w-]+\.[\w.-]+$/.test(part)) {
+      return (
+        <a key={index} href={`mailto:${part}`} className="text-primary underline-offset-2 hover:underline">
+          {part}
+        </a>
+      );
+    }
+    return <span key={index}>{part}</span>;
+  });
+}
 
 export function Terminal({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
   const navigate = useNavigate();
@@ -67,12 +104,59 @@ export function Terminal({ open, onOpenChange }: { open: boolean; onOpenChange: 
         </div>
 
         <div ref={scrollRef} className="max-h-96 overflow-y-auto px-4 py-3 text-sm leading-relaxed">
-          {lines.map((line) => (
-            <div key={line.id} className={line.type === "input" ? "flex gap-2" : "whitespace-pre-wrap text-[#a1a1aa]"}>
-              {line.type === "input" && <span className="shrink-0 text-primary">➜</span>}
-              <span>{line.text}</span>
+          {lines.map((line) => {
+            if (line.type === "input") {
+              return (
+                <div key={line.id} className="flex gap-2">
+                  <span className="shrink-0 text-primary">➜</span>
+                  <span>{line.text}</span>
+                </div>
+              );
+            }
+
+            if (line.type === "sources") {
+              return (
+                <div
+                  key={line.id}
+                  className="mb-2 mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[#71717a]"
+                >
+                  <span>Relevant work:</span>
+                  {line.sources?.map((source) => (
+                    <Link
+                      key={source.route}
+                      to={source.route}
+                      onClick={() => onOpenChange(false)}
+                      className="text-primary underline-offset-2 hover:underline"
+                    >
+                      {source.title} →
+                    </Link>
+                  ))}
+                </div>
+              );
+            }
+
+            return (
+              <div key={line.id} className="whitespace-pre-wrap text-[#a1a1aa]">
+                {linkifyText(line.text ?? "")}
+              </div>
+            );
+          })}
+
+          {lines.length === 1 && (
+            <div className="mt-3 space-y-1.5 text-xs text-[#71717a]">
+              <p>Try asking:</p>
+              {SUGGESTED_QUESTIONS.map((question) => (
+                <button
+                  key={question}
+                  type="button"
+                  onClick={() => submit(question)}
+                  className="block text-left text-[#a1a1aa] underline-offset-2 hover:text-primary hover:underline"
+                >
+                  &quot;{question}&quot;
+                </button>
+              ))}
             </div>
-          ))}
+          )}
 
           <div className="flex items-center gap-2">
             <span className="shrink-0 text-primary">➜</span>
@@ -85,7 +169,7 @@ export function Terminal({ open, onOpenChange }: { open: boolean; onOpenChange: 
               autoComplete="off"
               aria-label="Terminal input"
               className="w-full bg-transparent outline-none placeholder:text-[#52525b]"
-              placeholder="type a command..."
+              placeholder="ask a question or type help..."
             />
           </div>
         </div>

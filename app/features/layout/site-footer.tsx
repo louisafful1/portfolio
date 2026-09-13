@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { siteConfig } from "~/lib/site-config";
-import { LinkedinIcon } from "~/components/icons";
+import { LinkedinIcon, WhatsappIcon } from "~/components/icons";
 
 export function SiteFooter() {
   return (
@@ -18,6 +18,15 @@ export function SiteFooter() {
             className="transition-colors hover:text-foreground"
           >
             <LinkedinIcon className="size-4" />
+          </a>
+          <a
+            href={siteConfig.social.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+            className="transition-colors hover:text-foreground"
+          >
+            <WhatsappIcon className="size-4" />
           </a>
           <a
             href={`mailto:${siteConfig.email}`}

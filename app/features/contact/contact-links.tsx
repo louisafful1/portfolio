@@ -1,5 +1,5 @@
 import { Download, Mail } from "lucide-react";
-import { LinkedinIcon } from "~/components/icons";
+import { LinkedinIcon, WhatsappIcon } from "~/components/icons";
 import { Button } from "~/components/ui/button";
 import { siteConfig } from "~/lib/site-config";
 
@@ -18,6 +18,11 @@ export function ContactLinks() {
         <Button variant="outline" size="sm" asChild>
           <a href={siteConfig.social.linkedin} target="_blank" rel="noreferrer">
             <LinkedinIcon className="size-4" /> LinkedIn
+          </a>
+        </Button>
+        <Button variant="outline" size="sm" asChild>
+          <a href={siteConfig.social.whatsapp} target="_blank" rel="noreferrer">
+            <WhatsappIcon className="size-4" /> WhatsApp
           </a>
         </Button>
         <Button variant="outline" size="sm" asChild>

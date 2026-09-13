@@ -49,7 +49,7 @@ duplicated into Experience.
   replace or refine this - say the word if you want that swapped in too.
 - The hero dashboard's "Tech stack" badges
   (`app/features/hero/dashboard-panel.tsx`) are still a generic placeholder
-  list (React, Node.js, TypeScript, Docker, PostgreSQL, AWS) rather than
+  list (React, Node.js, TypeScript, Docker, PostgreSQL) rather than
   pulled from real project data - flagging in case you want it accurate.
 
 ## Contact form
