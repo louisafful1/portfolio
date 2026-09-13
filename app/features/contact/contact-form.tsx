@@ -11,8 +11,9 @@ type Status = "idle" | "sending" | "sent";
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sendError, setSendError] = useState<string | null>(null);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formEl = event.currentTarget;
     const form = new FormData(formEl);
@@ -26,15 +27,30 @@ export function ContactForm() {
     if (!message) nextErrors.message = "Message can't be empty";
 
     setErrors(nextErrors);
+    setSendError(null);
     if (Object.keys(nextErrors).length > 0) return;
 
-    // No backend wired up yet - this simulates a send.
-    // Swap this block for a real request (e.g. Formspree/EmailJS/your own API) when ready.
     setStatus("sending");
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        setSendError(data.error || "Could not send your message right now. Try again in a moment.");
+        setStatus("idle");
+        return;
+      }
+
       setStatus("sent");
       formEl.reset();
-    }, 1200);
+    } catch {
+      setSendError("Could not send your message right now. Try again in a moment.");
+      setStatus("idle");
+    }
   };
 
   return (
@@ -89,6 +105,8 @@ export function ContactForm() {
               <Textarea id="message" name="message" rows={5} placeholder="What are you building?" aria-invalid={Boolean(errors.message)} />
               {errors.message && <p className="text-xs text-destructive">{errors.message}</p>}
             </div>
+
+            {sendError && <p className="text-sm text-destructive">{sendError}</p>}
 
             <Button type="submit" size="lg" className="w-full" disabled={status === "sending"}>
               {status === "sending" ? (
