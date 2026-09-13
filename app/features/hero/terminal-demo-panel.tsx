@@ -78,7 +78,7 @@ export function TerminalDemoPanel({ onCycleComplete }: { onCycleComplete?: () =>
         <LogoMark className="ml-auto h-4 w-auto opacity-80" />
       </div>
 
-      <div className="flex min-h-96 flex-col justify-center px-5 py-5 text-sm leading-relaxed">
+      <div className="flex min-h-96 flex-col justify-start px-5 py-5 text-sm leading-relaxed">
         <p className="mb-3 text-xs text-[#71717a]">Ask about my work, projects, experience or skills.</p>
 
         <div className="flex gap-2">
