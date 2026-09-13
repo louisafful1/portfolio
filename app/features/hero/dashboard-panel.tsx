@@ -28,7 +28,8 @@ export function DashboardPanel() {
         <Radio className="size-3.5 text-muted-foreground" />
       </div>
 
-      <div className="grid grid-cols-2 gap-6 px-5 py-5">
+      <div className="grid grid-cols-3 gap-4 px-5 py-5">
+        <Metric label="Years building" value={siteConfig.stats.yearsBuilding} suffix="+" />
         <Metric label="Projects built" value={siteConfig.stats.projectsBuilt} suffix="+" />
         <Metric label="Technologies" value={siteConfig.stats.technologies} suffix="+" />
       </div>

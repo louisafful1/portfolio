@@ -33,7 +33,7 @@ export const siteConfig = {
   stats: {
     projectsBuilt: 13,
     technologies: 20,
-    yearsBuilding: 3,
+    yearsBuilding: 4,
   },
 
   currentlyLearning: [
